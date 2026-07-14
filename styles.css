@@ -6,6 +6,7 @@
   --navy: #0F2C4F;
   --bond: #1E4D8C;
   --paper: #F4F7FB;
+  --diamond: #BA140F;   /* ← add this line */
   --white: #FFFFFF;
   --slate: #5A6B80;
   --hairline: #D8E0EA;
@@ -45,7 +46,7 @@ body {
 .lockup .sig::after { right: 0; }
 .lockup .sig .diamond {
   position: absolute; bottom: -5.5px; left: 26%;
-  width: 9px; height: 9px; background: var(--bond);
+  width: 9px; height: 9px; background: var(--diamond);
   transform: rotate(45deg);
 }
 .lockup.reverse .word { color: var(--paper); }
@@ -118,7 +119,7 @@ section.navy .muted { color: #AFC2D9; }
 .sigline::before { left: 0; } .sigline::after { right: 0; }
 .sigline .diamond {
   position: absolute; top: -4.5px; left: 50%; margin-left: -5.5px;
-  width: 11px; height: 11px; background: var(--bond); transform: rotate(45deg);
+  width: 11px; height: 11px; background: var(--diamond); transform: rotate(45deg);
 }
 section.navy .sigline { background: var(--paper); }
 section.navy .sigline::before, section.navy .sigline::after { background: var(--paper); }
@@ -142,7 +143,7 @@ section.navy .bipartite .join::before { background: var(--paper); }
 .bipartite .join .diamond {
   position: absolute; top: 50%; left: 50%;
   width: 12px; height: 12px; margin: -6px 0 0 -6px;
-  background: var(--bond); transform: rotate(45deg);
+  background: var(--diamond); transform: rotate(45deg);
 }
 .party .label {
   font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
