@@ -1,0 +1,206 @@
+/* TilNeeded — Brand Specifications v1.0
+   Navy #0F2C4F · Bond Blue #1E4D8C · Paper #F4F7FB
+   Type: Arial / Liberation Sans */
+
+:root {
+  --navy: #0F2C4F;
+  --bond: #1E4D8C;
+  --paper: #F4F7FB;
+  --white: #FFFFFF;
+  --slate: #5A6B80;
+  --hairline: #D8E0EA;
+  --max: 1080px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, "Liberation Sans", sans-serif;
+  color: var(--navy);
+  background: var(--white);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ---------- wordmark lockup (per spec: single visual unit) ---------- */
+.lockup { display: inline-block; text-decoration: none; }
+.lockup .word {
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1;
+  display: block;
+}
+.lockup .sig {
+  display: block; position: relative;
+  height: 9px; margin-top: 6px;
+  border-bottom: 2.5px solid var(--navy);
+}
+.lockup .sig::before, .lockup .sig::after {
+  content: ""; position: absolute; bottom: -5px;
+  width: 2.5px; height: 9px; background: var(--navy);
+}
+.lockup .sig::before { left: 0; }
+.lockup .sig::after { right: 0; }
+.lockup .sig .diamond {
+  position: absolute; bottom: -5.5px; left: 26%;
+  width: 9px; height: 9px; background: var(--bond);
+  transform: rotate(45deg);
+}
+.lockup.reverse .word { color: var(--paper); }
+.lockup.reverse .sig { border-color: var(--paper); }
+.lockup.reverse .sig::before, .lockup.reverse .sig::after { background: var(--paper); }
+
+/* ---------- header / nav ---------- */
+header.site {
+  border-bottom: 1px solid var(--hairline);
+  background: var(--white);
+}
+header.site .inner {
+  max-width: var(--max); margin: 0 auto; padding: 20px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px;
+}
+nav.main { display: flex; gap: 26px; flex-wrap: wrap; }
+nav.main a {
+  color: var(--navy); text-decoration: none;
+  font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+}
+nav.main a:hover, nav.main a:focus { color: var(--bond); }
+nav.main a.here { color: var(--bond); border-bottom: 2px solid var(--bond); padding-bottom: 3px; }
+a:focus-visible { outline: 2px solid var(--bond); outline-offset: 3px; }
+
+/* ---------- hero ---------- */
+.hero { background: var(--navy); color: var(--paper); }
+.hero .inner { max-width: var(--max); margin: 0 auto; padding: 84px 24px 72px; }
+.hero .lockup .word { font-size: clamp(44px, 7vw, 76px); letter-spacing: -1.5px; }
+.hero .lockup .sig { height: 12px; border-width: 3.5px; }
+.hero .lockup .sig::before, .hero .lockup .sig::after { width: 3.5px; height: 13px; bottom: -7px; }
+.hero .lockup .sig .diamond { width: 13px; height: 13px; bottom: -8px; }
+.hero .tagline {
+  margin-top: 30px; font-size: clamp(19px, 2.6vw, 25px);
+  max-width: 620px; line-height: 1.45; color: var(--paper);
+}
+.hero .pbc {
+  margin-top: 16px; font-size: 12.5px; letter-spacing: 3px;
+  text-transform: uppercase; color: #9FB4CD;
+}
+
+/* ---------- sections & eyebrow (descriptor style) ---------- */
+section { padding: 66px 24px; }
+section .inner { max-width: var(--max); margin: 0 auto; }
+section.paper { background: var(--paper); }
+section.navy { background: var(--navy); color: var(--paper); }
+.eyebrow {
+  font-size: 12.5px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--bond); margin-bottom: 14px;
+}
+section.navy .eyebrow { color: #8FB2DE; }
+h1, h2 { font-weight: bold; letter-spacing: -0.5px; line-height: 1.15; }
+h2 { font-size: clamp(27px, 4vw, 38px); margin-bottom: 20px; }
+h3 { font-size: 19px; margin-bottom: 8px; letter-spacing: -0.2px; }
+p + p { margin-top: 14px; }
+.lede { font-size: 19px; max-width: 760px; }
+.muted { color: var(--slate); }
+section.navy .muted { color: #AFC2D9; }
+.maxw { max-width: 760px; }
+
+/* ---------- signature divider: the site's structural device ---------- */
+.sigline {
+  position: relative; height: 2.5px; background: var(--navy);
+  margin: 44px 0;
+}
+.sigline::before, .sigline::after {
+  content: ""; position: absolute; top: -5px;
+  width: 2.5px; height: 12px; background: var(--navy);
+}
+.sigline::before { left: 0; } .sigline::after { right: 0; }
+.sigline .diamond {
+  position: absolute; top: -4.5px; left: 50%; margin-left: -5.5px;
+  width: 11px; height: 11px; background: var(--bond); transform: rotate(45deg);
+}
+section.navy .sigline { background: var(--paper); }
+section.navy .sigline::before, section.navy .sigline::after { background: var(--paper); }
+
+/* ---------- bipartite block: two parties joined at the diamond ---------- */
+.bipartite {
+  display: grid; grid-template-columns: 1fr 56px 1fr;
+  align-items: stretch; gap: 0; margin: 36px 0;
+}
+.bipartite .party {
+  background: var(--white); border: 1px solid var(--hairline);
+  padding: 26px 26px 24px;
+}
+section.navy .bipartite .party { background: #16385F; border-color: #2B4C77; }
+.bipartite .join { position: relative; }
+.bipartite .join::before {
+  content: ""; position: absolute; top: 50%; left: 0; right: 0;
+  height: 2.5px; background: var(--navy); margin-top: -1.25px;
+}
+section.navy .bipartite .join::before { background: var(--paper); }
+.bipartite .join .diamond {
+  position: absolute; top: 50%; left: 50%;
+  width: 12px; height: 12px; margin: -6px 0 0 -6px;
+  background: var(--bond); transform: rotate(45deg);
+}
+.party .label {
+  font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--bond); margin-bottom: 10px;
+}
+section.navy .party .label { color: #8FB2DE; }
+
+/* ---------- stats ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-top: 36px; }
+.stat .big { font-size: clamp(40px, 5vw, 56px); font-weight: bold; letter-spacing: -1.5px; line-height: 1; }
+.stat .small { margin-top: 8px; font-size: 14px; color: var(--slate); }
+section.navy .stat .small { color: #AFC2D9; }
+
+/* ---------- cards / rows ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 30px; }
+.card { background: var(--white); border: 1px solid var(--hairline); padding: 26px; }
+section.paper .card { background: var(--white); }
+.card p { font-size: 15.5px; }
+.docrow { border-top: 1px solid var(--hairline); padding: 22px 0; display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: baseline; }
+.docrow:last-child { border-bottom: 1px solid var(--hairline); }
+.docrow .status { font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--bond); white-space: nowrap; }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block; margin-top: 26px; padding: 14px 28px;
+  background: var(--bond); color: var(--white); text-decoration: none;
+  font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase;
+}
+.btn:hover, .btn:focus { background: var(--navy); }
+section.navy .btn:hover, section.navy .btn:focus { background: var(--paper); color: var(--navy); }
+.btn.ghost { background: transparent; border: 1.5px solid var(--bond); color: var(--bond); margin-left: 12px; }
+.btn.ghost:hover, .btn.ghost:focus { background: var(--bond); color: var(--white); }
+
+/* ---------- table ---------- */
+table.record { width: 100%; border-collapse: collapse; margin-top: 26px; font-size: 15.5px; }
+table.record th {
+  text-align: left; font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--slate); padding: 10px 14px; border-bottom: 2px solid var(--navy);
+}
+table.record td { padding: 12px 14px; border-bottom: 1px solid var(--hairline); }
+
+/* ---------- footer ---------- */
+footer.site { background: var(--navy); color: #AFC2D9; }
+footer.site .inner {
+  max-width: var(--max); margin: 0 auto; padding: 48px 24px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px;
+  font-size: 14px;
+}
+footer.site .lockup .word { font-size: 22px; }
+footer.site a { color: var(--paper); text-decoration: none; }
+footer.site a:hover { color: #8FB2DE; }
+
+/* ---------- responsive & a11y ---------- */
+@media (max-width: 720px) {
+  .bipartite { grid-template-columns: 1fr; }
+  .bipartite .join { height: 56px; }
+  .bipartite .join::before { top: 0; bottom: 0; left: 50%; right: auto; width: 2.5px; height: 100%; margin: 0 0 0 -1.25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
