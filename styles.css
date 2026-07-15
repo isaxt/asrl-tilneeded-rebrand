@@ -33,6 +33,13 @@ body {
   line-height: 1;
   display: block;
 }
+
+.lockup img.logo-img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
 .lockup .sig {
   display: block; position: relative;
   height: 9px; margin-top: 6px;
