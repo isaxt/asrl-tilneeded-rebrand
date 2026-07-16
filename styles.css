@@ -80,6 +80,10 @@ nav.main a.here { color: var(--bond); border-bottom: 2px solid var(--bond); padd
 a:focus-visible { outline: 2px solid var(--bond); outline-offset: 3px; }
 
 /* ---------- hero ---------- */
+
+.hero .logo-img { height: clamp(52px, 7vw, 88px); }
+footer.site .logo-img { height: 32px; }
+
 .hero { background: var(--navy); color: var(--paper); }
 .hero .inner { max-width: var(--max); margin: 0 auto; padding: 84px 24px 72px; }
 .hero .lockup .word { font-size: clamp(44px, 7vw, 76px); letter-spacing: -1.5px; }
