@@ -81,7 +81,7 @@ a:focus-visible { outline: 2px solid var(--bond); outline-offset: 3px; }
 
 /* ---------- hero ---------- */
 
-.hero .logo-img { height: clamp(52px, 7vw, 88px); }
+.hero .logo-img { height: clamp(90px, 14vw, 200px); }
 footer.site .logo-img { height: 32px; }
 
 .hero { background: var(--navy); color: var(--paper); }
