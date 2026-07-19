@@ -99,11 +99,25 @@ footer.site .logo-img { height: 32px; }
   text-transform: uppercase; color: #9FB4CD;
 }
 
+/* ---------- photographic background overlay ----------
+   Usage: add class="bg-photo" alongside .hero or section.navy,
+   then set the image inline: style="--bg-img:url('bg_imgs/bg1.jpg')"
+   The gradient sits on top of the photo so text stays legible,
+   the same treatment used on the SCTE reference hero. */
+.bg-photo {
+  background-image:
+    linear-gradient(rgba(15, 44, 79, 0.88), rgba(15, 44, 79, 0.92)),
+    var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ---------- sections & eyebrow (descriptor style) ---------- */
 section { padding: 66px 24px; }
 section .inner { max-width: var(--max); margin: 0 auto; }
 section.paper { background: var(--paper); }
-section.navy { background: var(--navy); color: var(--paper); }
+section.navy { background-color: var(--navy); color: var(--paper); }
 .eyebrow {
   font-size: 12.5px; letter-spacing: 3px; text-transform: uppercase;
   color: var(--bond); margin-bottom: 14px;
